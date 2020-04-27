@@ -1,0 +1,56 @@
+- Low Level Design -
+We will take help of two different data structure so that we can fetch data element in O(1) time.
+    1. HashMap
+    2. Doubly Linked List
+
+POST api flow
+When ever we will get a new data with its key.
+We will store that key in our hashmap and add that value the linked list.
+HashMap value will point to the node where the actual value is stored on the linked list.
+
+
+                    ___________(valueN)___________
+                    |                             |
+        new (keyN,valueN)                         (valueN)<->()<->()<->()<->()<->()
+              |                                      ^
+            (keyN)                                   |
+              |                                      |
+              \/                                     |
+           HASH MAP                                  |
+    ------------------------                         |
+    |  key1   |  pointer1  |                         |
+    |  key2   |  pointer2  |                         |
+    |  key3   |  pointer3  |                         |
+    |  key4   |  pointer4  |                         |
+    |  key5   |  pointer5  |                         |
+    |  key6   |  pointer6  |                         |
+    |  key7   |  pointer7  |                         |
+    .  keyN   .  pointerN  .--------------------------
+
+
+GET api flow
+When there is a get request with a key
+it will search the key in hashmap
+    if key not exists
+        then data not found
+    else
+        Follow the pointer to get the value which is stored in linked list and return the value.
+        Put that node at the front.
+
+             REQ                                    RES
+              |                                      |
+             keyN                       ()<->()<->(valueN)<->()<->()<->()<->()<->()
+              |                                      ^
+            (keyN)                                   |
+              |                                      |
+              \/                                     |
+           HASH MAP                                  |
+    ------------------------                         |
+    |  key1   |  pointer1  |                         |
+    |  key2   |  pointer2  |                         |
+    |  key3   |  pointer3  |                         |
+    |  key4   |  pointer4  |                         |
+    |  key5   |  pointer5  |                         |
+    |  key6   |  pointer6  |                         |
+    |  key7   |  pointer7  |                         |
+    .  keyN   .  pointerN  .--------------------------

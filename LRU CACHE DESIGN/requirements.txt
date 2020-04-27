@@ -1,0 +1,4 @@
+- Requirements -
+1. Should store recently used DB records.
+2. Should be separately deployable.
+3. Quick data read ability.

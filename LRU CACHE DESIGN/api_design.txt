@@ -1,0 +1,6 @@
+ - API DESIGN -
+ 1. end point to store data
+  POST /api/data
+    -body DATA
+ 2. end point to get data
+  GET /api/data

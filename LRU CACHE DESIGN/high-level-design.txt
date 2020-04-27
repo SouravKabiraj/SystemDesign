@@ -1,0 +1,8 @@
+- HIGH LEVEL DESIGN -
+User can specify their requirements according their system
+
+when user specify extremely low downtime ie high availability and huge size then they will be given multiple cache
+device or a big cache device according to their choice.
+
+When a client device send a cache related request to our system then router will redirect the request to proper cache
+device.

@@ -1,0 +1,9 @@
+- Back Of The Envelope Calculation -
+1. Cache Size - Size should be configurable (range ~ 8GB to 100GB or more)
+for a small system (like demo projects) it will be very small
+for a huge system like youtube.com it will be extremely big
+    So RAM size should be configurable
+
+2. Bearable Downtime - Size should be configurable from 1hr/year to 6days/year
+
+3. Response time - Avg response time expected as low as 6-15 m.sec
