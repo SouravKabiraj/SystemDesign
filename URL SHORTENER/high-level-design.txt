@@ -1,0 +1,13 @@
+- HIGH LEVEL DESIGN -
+CDN - We are going to use CDN to store all static content.
+
+GATEWAY SERVER - Front end application will first interact with our gateway service. Gateway will
+ first validate the request by calling auth service.
+
+AUTH SERVICE - Auth service is used for authentication. To authenticate a request, sometimes it needs user data.
+ At that time it will interact with user service.
+
+USER SERVICE - User Service will handle all user related request.
+
+URL SERVICE - Url service is kind of back bone of the system. It will handle all POST and GET request for short
+ url.

@@ -1,0 +1,15 @@
+- DATABASE DIAGRAM -
+
+ER DIAGRAM
+    USER
+        - id
+        - name
+        - status
+
+    URL
+        - id
+        - actual url
+        - tiny url
+        - exp date
+        - last used
+        - user id

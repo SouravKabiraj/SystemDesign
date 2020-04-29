@@ -1,0 +1,10 @@
+ - API DESIGN -
+ 1. CREATE tiny URL
+ POST api/tinyUrl/
+    - body
+        {
+            url : {{url}}
+        }
+
+ 2. GET actual url
+ GET api/tinyUrl/{{t_url}}

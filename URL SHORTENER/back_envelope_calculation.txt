@@ -1,0 +1,13 @@
+- Back Of The Envelope Calculation -
+1. Expecting 1 request per second.
+    api.facebook.com/...            ->         aTjdU17o2HaH
+
+    storage required per record = actual url size + tiny url size + (buffer size)
+                                = avg (30byte) + 12 byte + (buffer size) = 42 byte + (8 byte buffer size)
+                                = 50 byte
+    storage required per year = 365 * 24 * 60 * 60 * 50 bytes
+                              = 1.576 GB per year
+
+2. To reduce response time we are going to store recently used records in our cache
+    Amount of storage required to store last 1 month records = 30 * 24 * 60 * 60 * 50 bytes
+                                                             = 129 MB

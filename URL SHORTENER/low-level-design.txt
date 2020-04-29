@@ -1,0 +1,21 @@
+- Low Level Design -
+
+Shorting Technique:
+    aim - {{actual url}} ->  /api/tinyUrl/{{12char}}
+
+    Hashing technique will be fine in this case.
+
+    {{actual url}} + {{time}}  -------[HASH]-------->  {{12char}}
+                                                       |
+                                                       |
+                                                      \/
+                                     /api/tinyUrl/{{12char}}
+
+Basic flow:
+    1. User will request to short given URL
+    2. Our URL service will create hash
+    3. Then it will check whether created hash exists in DB
+        Exists
+            4. goto 2
+        Not Exists
+            4. return the hash by adding prefix string.

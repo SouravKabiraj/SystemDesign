@@ -1,0 +1,5 @@
+- Requirements -
+1. User should able to create short URL.
+2. Down-time should be as small as possible.
+3. Small response time.
+4. Premium user can customize result urls
