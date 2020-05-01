@@ -1,0 +1,16 @@
+- DATABASE DIAGRAM -
+
+Notification Preference [
+                        ID, USER_ID, CATEGORY_ID, FREQUENCY, FREQUENCY_DATA
+                        ]
+
+ENUM FREQUENCY [
+                DAILY,
+                WEEKLY,
+                MONTHLY
+               ]
+
+ENUM FREQUENCY_DATA [
+                    for WEEKLY frequency -> MONDAY      examples
+                    for MONTHLY frequency -> 26th       examples
+                    ]

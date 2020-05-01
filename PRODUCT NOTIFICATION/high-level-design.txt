@@ -1,0 +1,15 @@
+- HIGH LEVEL DESIGN -
+Main Components of our system:
+ 1. Preference Service : It is responsible to maintain all notification preference related data
+ 2. Product Service : It is responsible to maintain all product and category related data
+ 3. Content Provider Service : It is responsible provide email text to notification service
+ 4. Notification Orchestrator Service : It decides which all notifications to send
+    to which set of user for that particular day.
+ 5. Notification Service : It is responsible to send email using fan-out technique.
+
+Other Content:
+ 1. We are going to keep all static content in CDN to reduce load from our own servers.
+ 2. Gateway Server will handle all in-coming request and authenticate using Auth server.
+ 3. Auth server will validate all requests.
+
+*HLD.png*

@@ -1,0 +1,4 @@
+- Requirements -
+1. User should able to create notification preference
+2. Notification preference can have frequency and category
+3. User will get notification according to the preference

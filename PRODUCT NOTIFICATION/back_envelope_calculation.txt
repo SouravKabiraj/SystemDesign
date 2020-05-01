@@ -1,0 +1,21 @@
+- Back Of The Envelope Calculation -
+1. Expecting 10 million user
+    Database required to store 10 million notification preference
+
+                    userId: 01,            -------->  12bytes
+                    categoryId : CAT07,    -------->  12bytes
+                    frequency : DAILY,     -------->  1bytes
+                    frequencyData : MONDAY  -------->  1bytes
+
+                    Total [26bytes required for each record]
+
+    so, the DB size is       10 million * 26bytes  = [0.26 GB]
+
+    Say per month new 10000 user will register
+                 10000 * 26bytes = [.26MB] new storage required every month
+
+
+2. Bearable Downtime - Size should be configurable from 1hr/year to 6days/year
+
+3. Response time - We can compromise in case of response time as we are sending email.
+    It may take 10-15min to reach user device.

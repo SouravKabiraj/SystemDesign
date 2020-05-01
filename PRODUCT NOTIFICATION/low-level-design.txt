@@ -1,0 +1,17 @@
+- Low Level Design -
+Every day [Notification Orchestrator Service] will select a set of preferences for which we have to send email.
+    // CURRENT DATE 1st May | FRIDAY
+
+    SELECT * FROM NOTIFICATION_PREFERENCE WHERE FREQUENCY = "DAILY"
+
+    SELECT * FROM NOTIFICATION_PREFERENCE WHERE FREQUENCY = "WEEKLY" AND FREQUENCY_DATA = "FRIDAY"
+
+    SELECT * FROM NOTIFICATION_PREFERENCE WHERE FREQUENCY = "MONTHLY" AND FREQUENCY_DATA = "1"
+
+Now we know to whom we have to send notification for today. Notification Orchestrator Service sends all this data
+    to Notification Service in async way (Kafka/SQS we can use here).
+
+    content provider service will create content by seeing this categoryId in NOTIFICATION_PREFERENCE records.
+
+    Notification Service gets email body from content provider and email id from User Service and using fanout
+    process it will send all the data.

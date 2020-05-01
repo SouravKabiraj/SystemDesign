@@ -1,0 +1,10 @@
+ - API DESIGN -
+ 1. User should create his notification preference
+  POST /api/notification-preference
+    -body
+        {
+            userId: 01,
+            categoryId : CAT07,
+            frequency : DAILY,
+            frequencyData : MONDAY
+        }
