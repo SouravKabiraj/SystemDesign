@@ -1,0 +1,21 @@
+ - API DESIGN -
+1. Get all Insta Story for a particular userId
+    GET /api/stories?followerId=userId
+    GET /api/stories/id
+    POST /api/stories
+    GET /api/stories?userId=userId
+2. News feed
+    GET /api/feed?userId=userId
+3. Post
+    GET /api/post/id
+    POST /api/post
+4. Like
+    POST /api/likes
+5. Notification
+    GET /api/activities?followerId=userId
+6. Follow
+    GET /api/follow?followerId=userId
+    GET /api/follow?followingId=userId
+    POST /api/follow
+7. Chat (-)
+9. Live Story (-)

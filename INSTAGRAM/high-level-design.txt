@@ -1,0 +1,28 @@
+- HIGH LEVEL DESIGN -
+
+File Management Service - We are going to store images in object storage. As we are not going to update the images we
+dont need any Blob storage.
+
+Post Service - We are going to maintain post, like, comment related data using this service.
+
+Follow Service - Follow service will maintain follower-following relationship data.
+
+Activity Service - Activity Service will keep all kind of activity log. When a person liked, replied, posted any thing
+out post service will push a related message in queue. Activity service will take that data and store it in it's own DB.
+
+Profile Service - It will maintain all user profiles.
+
+Story Service - It will maintain all story related data.
+
+NewsFeed Service - For a particular user, it will take all follow profile and search for their posts. It will maintain
+a list of post ids.
+            Alternative way : when ever a user(A) post something, post service will emit a event. News feed service takes
+            that event and push this post id to all followers news feed.
+
+Notification Service - Every user is connected with one Push Service. When every there is a activity like likes
+comments in User(A)s post it emit an message in the queue. Notification reads that message, get the push server which is
+connected with User(A) and tell that push server to send that message.
+
+Push Registry Service - Push server keeps track of which user is connected with which push server.
+
+Push Service - Push Service connect with Users with socket connection.

@@ -1,0 +1,20 @@
+- Back Of The Envelope Calculation -
+1.  Post -
+    Assuming 5 millions of post per day
+    new storage needed per day = 5 million * (image size + text )
+                               = 5000000 * (50KB + 50byte)
+                               = 5000000 * (51KB)
+                               = 255,000,000KB
+                               = 255GB
+    monthly storage needed = 255GB * 30 = 7.6TB
+
+2. user count 100 million
+
+3. Story -
+    Assuming 5 millions of story per day
+    storage needed for story = 5 million * (image size + text )
+                             = 5000000 * (50KB + 50byte)
+                             = 5000000 * (51KB)
+                             = 255,000,000KB
+                             = 255GB
+    this storage can be reused next day

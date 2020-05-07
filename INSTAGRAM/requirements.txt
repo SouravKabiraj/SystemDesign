@@ -1,0 +1,9 @@
+- Requirements -
+1. Insta Story
+2. News feed
+3. Post
+4. Like
+5. Notification
+6. Follow
+7. Chat (-)
+9. Live Story
