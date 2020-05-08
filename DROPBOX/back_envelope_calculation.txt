@@ -1,0 +1,16 @@
+- Back Of The Envelope Calculation -
+1. Number of User - 500 Millions
+2. Number of Document per file - 10 files
+3. Total number of files - 5000 Millions = 5 billions
+4. Storage needed to store files -
+                    say avg size of file - 1MB
+                    5 billions * 1MB = 5,000,000,000 MB = 5000TB = 5PB
+5. File related request per second - 50,000
+                    average request time = 500ms
+                    10000 concurrent request can be handled
+
+                    1 server instance can serve 250 request within 500ms
+                    in 1sec - 500 request can be handled
+
+                    Number of instance required to handle 50k request is 50000/500 = 100
+                    So we need 100 Instance always up.

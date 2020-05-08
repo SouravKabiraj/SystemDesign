@@ -1,0 +1,40 @@
+ - API DESIGN -
+1. Create Account Directory
+    POST api/directory
+
+2. Add Directory
+    POST api/directory
+     BODY {
+                name: dirName
+                path: dirPath
+          }
+     HEADER
+        userId : user0
+
+3. Add File
+    POST api/file
+    BODY {
+            name: fileName
+            path: filePath
+        }
+    HEADER
+        userId : user0
+
+4. Update File page1
+    PUT api/file/page1
+    BODY {
+          name: fileName
+          path: filePath
+          updates
+    }
+    HEADER
+       userId : user0
+
+5. Add Permission
+    POST api/permission
+    BODY {
+        userId : userAccess
+        access : r-w-w
+        target : fileID/dirID
+        targetType : file/dir
+    }

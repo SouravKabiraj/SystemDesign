@@ -1,0 +1,7 @@
+- Requirements -
+1. Create Account
+2. Create Directory
+3. Create File
+4. Update File
+5. Share File with a group
+6. Simultaneous update of a file

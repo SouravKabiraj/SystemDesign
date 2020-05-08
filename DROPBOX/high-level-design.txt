@@ -1,0 +1,17 @@
+- HIGH LEVEL DESIGN -
+We are going to use object storage to store all the files.
+Each files will be divided into multiple parts called "chunks"
+File Metadata will keep a track of all the chunks and its different version
+
+"File Orchestrator" will get the file from the user and send that to "Chunker Service"
+Chunker service create chunks and send those chunks to "file management service" to store in object storage.
+Every Chunk has ID. Chunker returns those to "File Orchestrator" after creating chunks.
+
+Suppose multiple users are accessing same file.
+User1 made some changes to the file.
+
+User1 -> Gateway Service -> File Management Service -> OBJ STORAGE
+                                    |
+                                  QUEUE
+                                    |
+Other Users <-----------    Notification Service

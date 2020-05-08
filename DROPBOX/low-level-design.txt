@@ -1,0 +1,15 @@
+- Low Level Design -
+When A user read/uploads a file, it send the request to Gateway server. It authenticates the request by using
+Auth/Permission server. Auth Server keep tracks whether an user has permission to access a specific file.
+If the req is valid it send the request to File orchestrator. File orchestrator send the file to clunker to create chunks.
+Chunker sends the chunk files to File manager to store it in Object Storage.
+
+
+Say UserA shared a file "fileNew" with UserB.
+When UserA and UserB opens the file then Notification creates a socket connection with those users.
+UserA made some changes
+    1. Specific chunk will be updated by File Management service
+    2. File Management service push an chunk update event in Queue
+    3. Notification Service take that event and notify others (UserB).
+
+* Notification Server creates socket connection with users.

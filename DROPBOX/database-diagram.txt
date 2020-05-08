@@ -1,0 +1,38 @@
+- DATABASE DIAGRAM -
+User {
+    id
+    name
+    ..
+}
+
+Directory {
+    id
+    files []
+    dirs []
+}
+
+Account {
+    id
+    userId
+    mainDir : dirId
+}
+
+UserPermission {
+    userId
+    targetId
+    targetType
+    accessType
+}
+
+file {
+    id
+    name
+    chunks [chunkId1,chunkId2,chunkId3,...]
+    metadata
+}
+
+chunk {
+    id
+    objectID
+    version
+}
