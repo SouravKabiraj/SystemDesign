@@ -1,3 +1,5 @@
 - Requirements -
 1. One to One Chat
 2. Group chat
+3. Message Status
+4. Last seen of user

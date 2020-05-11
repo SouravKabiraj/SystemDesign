@@ -1,20 +1,18 @@
 - Back Of The Envelope Calculation -
-1.  Post -
-    Assuming 5 millions of post per day
-    new storage needed per day = 5 million * (image size + text )
-                               = 5000000 * (50KB + 50byte)
-                               = 5000000 * (51KB)
-                               = 255,000,000KB
-                               = 255GB
-    monthly storage needed = 255GB * 30 = 7.6TB
+1. Number of user assuming 1 Billion
+2. Average number of text message a person send every day = 50
+3. Average number of characters in each text message = 10
 
-2. user count 100 million
+Storage required to store all message for 1 year = 365 * (Storage for a day)
+                                                 = 365 * (10 * 50 * 1000000000) byte
+                                                 = 365 * (10 * 50 * 1) GB
+                                                 = 365 * 500 GB
+                                                 = 182500 GB
+                                                 = 182.5 PB
 
-3. Story -
-    Assuming 5 millions of story per day
-    storage needed for story = 5 million * (image size + text )
-                             = 5000000 * (50KB + 50byte)
-                             = 5000000 * (51KB)
-                             = 255,000,000KB
-                             = 255GB
-    this storage can be reused next day
+4. Number of Instance needed for chat server =
+    say the number of active user for a moment is 100 million
+                                              = 100 million / (number of connection an instance can handle)
+                                              = 100,000,000 / 65,000
+                                              = 100,000 / 65
+                                              = 1538

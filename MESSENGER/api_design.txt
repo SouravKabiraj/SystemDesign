@@ -1,1 +1,11 @@
  - API DESIGN -
+1. api to add friend
+POST /api/contact
+
+2. api to create group
+POST /api/group
+
+3. api to add user to a group
+PUT /api/group
+
+Ignoring other end points like api/status api/story etc.

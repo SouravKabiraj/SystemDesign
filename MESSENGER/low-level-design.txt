@@ -1,1 +1,29 @@
 - Low Level Design -
+
+How Normal Chatting will work ->
+    1. User sends message to its Chat server.    (User will get [sent] status)
+    2. It ask Chat Room Server which all user will get this message.
+    3. User Reg Server will give it Chat Server list where recipients are connected.
+    4. Now Current Chat server sends the message to those chat server.
+    5. Those Chat server will send the message to recipients. (User will get [received] status)
+    6. Once recipient open chat, user will get [Read] status.
+
+
+    {user}            _______________                      _________________
+       |_____ 1 _____| Chat Server 1 |______async__2.2___>| Message Server |
+                     |_______________|                    |________________|
+                      |  |    |    ^  |               _____________
+                      |  |    |    |  |___2.1_______>| CHAT SERVER |
+                      |  |    3    |_recipientIds____|_____________|
+                      4  |    |                ________________
+                      |  |    |________________|user reg server|
+                      |  |_____chat server ids_|_______________|
+                      |
+                     \/
+                      ________________
+ (recipient)-----5---|  Chat Server 2 |
+                     |________________|
+
+Last seen Feature ->
+    From activity server we can easily tell last seen of any user.
+    Last activity of a user will be last seen time of that user.

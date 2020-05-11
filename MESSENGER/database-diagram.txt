@@ -1,44 +1,33 @@
 - DATABASE DIAGRAM -
-Image
-Story {
-   objectId : ImageId
-   userId
-}
-Post {
-    objectId : [ImageId]
-    text
-    userId
-}
-Comments {
-    Id
-    targetId
-    targetType
-    text
-    userId
-}
-Like {
-    Id
-    targetId
-    userId
-}
-Profile {
-    userId
-    name
-    userName
-    ...
-}
-Follow {
-    followerId
-    followingId
-}
-News feed [post1,post15,post91]
-Activity {
-    action : LIKED, COMMENTED, POSTED..
-    targetId: postId/commentId
-    targetType : POST/COMMENT/...
-    userID: userId
-}
-LiveStory {
-    objectId : ImageId
-    views
-}
+Entities :
+1. User Profiles
+    {
+        Name:
+        Phone Number :
+        Status :
+    }
+2. Chat Rooms
+    {
+        Name :
+        UserIds:
+        CreatedTime:
+    }
+3. Contacts
+    {
+        Name :
+        UserId :
+    }
+4. Messages
+    {
+        text: string
+        sentBy : ID
+        chatRoomId: ID
+        status : READ | SENT | RECEIVED
+    }
+5. Activity
+    {
+        activityBy : userId
+        time : Date
+        ActivityType : Message | StatusCheck | OpenChatRoom | UserAdded | ....
+        ActivityId : ID
+    }
