@@ -1,0 +1,25 @@
+- HIGH LEVEL DESIGN -
+Main components are:
+
+1. Profile Service : Handle all user profile / account related operations.
+2. Tweet Service : Handles all tweet related operations.
+3. Follow Service : Keep follower followee relations.
+4. Notification Service : Send notification via gateway server.
+5. HashTag Service : It keeps track of uses of hashtags.
+6. Like and Comment Service : Handles all kind of likes comments for posts/comments etc.
+7. Feed Service : Maintains News Feed for all users.
+8. Auth Service :
+9. Trend Setter Service :
+
+Flow While a Post is created:
+1. Client Device send tweet request to Tweet Service via Gateway Service.
+2. Tweet Service emit a message in queue.
+3.1. Feed Service pick that message(tweet) and update all followee news feed
+3.2. Hashtag service pick that message(tweet) and update hashtag uses.
+
+Flow while someone like or comment a post:
+1. Client Device send like/comment request to Like&Comment Service via Gateway Service.
+2. Like&Comment Service emit a message in queue.
+3.1. Notification Service pick that message and send notification to actual post owner.
+3.2. Hashtag service pick that message(like/comment) and update hashtag uses.
+

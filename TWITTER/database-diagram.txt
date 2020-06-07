@@ -1,0 +1,45 @@
+- DATABASE DIAGRAM -
+
+Profile {
+    Id
+    Name
+    Location
+}
+
+Tweet {
+    Text
+    ProfileID
+    CreatedAt
+}
+
+Like {
+    ID
+    ProfileId
+    TargetId
+    TargetType
+}
+
+Comment {
+    ID
+    Text
+    UserId
+    TargetId
+    TargetType
+}
+
+Hashtag {
+    Id
+    Tag
+}
+
+HashTagUse {
+   TargetId : PostId/CommentId
+   TargetType : POST / COMMENT
+   CreateAt: Date
+   Location
+}
+
+Follow {
+    Follower
+    Followed
+}

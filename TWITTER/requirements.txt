@@ -1,0 +1,9 @@
+- Requirements -
+1. Create an account
+2. Post a Tweet
+3. #hashtag & treading
+4. Follow
+5. Comments & Reply
+6. Likes
+7. Notification   (Same as instagram)
+8. Twitter Feed   (Same as instagram)

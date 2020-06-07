@@ -1,0 +1,20 @@
+- Back Of The Envelope Calculation -
+
+Number of tweet per day = 100 million
+
+Amount of storage per tweet = 70byte
+
+Total Storage par day for Tweet = 100 million * 70bytes = 10,000,000 * 70byte
+                                     = 7000MB
+                                     = 7GB
+
+Total Storage par year for Tweet = 7GB * 365
+                                 = 2555 GB = 2.6TB
+
+for comments also almost amount of storage will be needed.
+
+On an average a web server can handle 1000 requests per second
+
+Post/Comment/Like per second = 500 million / (24*60*60) = 5785
+
+So number of server needed to handle post = 6 or 7 server will be good enough
