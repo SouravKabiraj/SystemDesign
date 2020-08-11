@@ -1,0 +1,23 @@
+- DATABASE DIAGRAM -
+Blog {
+    id,
+    title,
+    description,
+    body,
+    userId
+}
+
+Content {
+    id,
+    fileName
+}
+
+User {
+    id,
+    name
+}
+
+Follow {
+    followerId,
+    followeeId
+}

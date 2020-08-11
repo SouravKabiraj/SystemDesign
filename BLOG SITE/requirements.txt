@@ -1,0 +1,7 @@
+- Requirements -
+1. Create Blog
+2. Read Blog
+3. Update Blog
+4. Follow Tag / People
+5. Notification to all related follower
+6. Like Comment on Blog post

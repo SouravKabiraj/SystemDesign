@@ -1,0 +1,16 @@
+- Back Of The Envelope Calculation -
+1. Number of User = 10 Millions
+2. Number of new blog in one day = 10K
+3. Number of read per day for a post = 1K
+
+Increase in DB per year for blog
+    = 365 * 10,000 * 20KB
+    = 73GB
+
+Increase in User DB per year (avg)
+    = .5 Million
+
+Expected number of instance
+    = number of post per day * number of read per post / number of request per sec an instance can handle
+    = 10,000 * 1,000 / 15000
+    = 666

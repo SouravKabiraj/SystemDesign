@@ -1,0 +1,12 @@
+ - API DESIGN -
+ 1. POST /api/blog
+ 2. GET /api/blog?page={no}&size={n}
+ 3. GET /api/blog/{id}
+ 4. GET /api/content/{id}
+ 5. POST /api/content
+ 6. GET /api/follow?followee={postId}
+ 7. GET /api/follow?follower={userId}
+ 8. POST /api/comment
+ 9. GET /api/comment?blogId={id}
+ 10. POST /api/like
+ 11. GET /api/like?blogId={id}
