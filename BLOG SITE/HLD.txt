@@ -1,0 +1,29 @@
+--- High Level Design ---
+
+1. Flow of create post :
+
+                   User Service
+                        |
+                   Authorization Service                    Follow Service
+                        |                                          |
+Client Device ->  Gateway Service -> Blog Service -> |Q| -> Notification Service -> EMAIL/SMS
+                        |                                          |
+                  Authentication Service                    User Service
+
+All request from client device will be handled by Gateway. Gateway will validate the request with Authentication and
+Authorization server.
+After that Gateway route the request to blog service. Once blog is created Blog Service will create an message in
+message Queue.
+Notification Service will send notification to all the followers who are following the blog creator or tags that are
+associated with the created blog.
+
+                   User Service
+                        |
+                   Authorization Service
+                        |
+Client Device ->  Gateway Service -> Content Provider Service
+                        |
+                  Authentication Service
+
+Client device should send create content request while creating create blog request. create content request will also be
+handled by Gateway service.
